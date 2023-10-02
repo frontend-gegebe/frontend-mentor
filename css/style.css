@@ -1,0 +1,39 @@
+body {
+  background:hsl(30, 38%, 92%);
+  font-family:"Montserrat", Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+
+  background: white;
+  width:343px;
+  border-radius:3%;
+  overflow:hidden;
+}
+
+.card__img {
+  width: 100%;
+  max-width: 343px;
+
+}
+
+.card h2 {
+  font-display: ;
+}
+
+.card button {
+  background: rgb(61,129,104);
+  color:white;
+  width:295px;
+  height:48px;
+} 

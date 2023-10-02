@@ -1,7 +1,22 @@
+:root {
+  --corp-color-one:hsl(158, 36%, 37%);
+  --corp-color-two:hsl(30, 38%, 92%);
+  --corp-color-three:hsl(212, 21%, 14%);
+  --corp-color-four:hsl(228, 12%, 48%);
+  --b100:black;
+  --w100:white;
+
+  --corp-type-titles:"Fraunces", Georgia, 'Times New Roman', Times, serif;
+  --corp-type-text:"Montserrat", Arial, Helvetica, sans-serif;
+
+  --separacion:20px;
+}
+
 body {
-  background:hsl(30, 38%, 92%);
-  font-family:"Montserrat", Arial, Helvetica, sans-serif;
-  font-size: 14px;
+  background:var(--corp-color-two);
+  font-family:var(--corp-type-text);
+  font-size: 16px;
+  
   display: flex;
   justify-content: center;
   align-items: center;
@@ -11,29 +26,87 @@ body {
 .card {
   display: flex;
   flex-direction: column;
-
   justify-content: center;
-  align-items: center;
 
-  background: white;
+  background:var(--w100);
   width:343px;
-  border-radius:3%;
+  border-radius:10px 10px 10px 10px;
   overflow:hidden;
 }
 
 .card__img {
   width: 100%;
   max-width: 343px;
-
 }
 
-.card h2 {
-  font-display: ;
+.card__dades {
+  display: inherit;
+  flex-direction: column;
+  gap:var(--separacion);
+
+  padding: 22px;
 }
 
-.card button {
-  background: rgb(61,129,104);
-  color:white;
-  width:295px;
-  height:48px;
+.card__dades h2 {
+  color:var(--corp-color-four);
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 5px;
+  margin-left: 1px;
+}
+
+.card__dades h3 {
+  font-family:var(--corp-type-titles);
+  font-size: 32px;
+  line-height: 100%;
+  color:var(--corp-color-three);
+}
+
+.card__dades p {
+  color: var(--corp-color-four);
+  display: inherit;
+  flex-direction: column;
+  gap:var(calc(--separacion * 2)); /*gap:40px*/
+
+  font-size: 14px;
+  font-weight:500;
+  line-height: 160%;
+}
+
+.price {
+  display: flex;
+  align-items: center;
+  gap:16px;
+}
+
+.price span:first-child {
+  font-family:var(--corp-type-titles);
+  font-size: 34px;
+  color: var(--corp-color-one);
+}
+
+.price span:last-child {
+  text-decoration: line-through;
+  color: var(--corp-color-four);
+  font-size: 14px;
+}
+
+.card__button {
+  background: var(--corp-color-one);
+  color:var(--w100);
+  border-radius:10px;
+  font-size:16px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap:12px;
+
+  margin-top:0px;
+  padding:16px 90px;
 } 
+
+.card__button img{
+  width:14px;
+}

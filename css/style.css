@@ -3,13 +3,14 @@
   --corp-color-two:hsl(30, 38%, 92%);
   --corp-color-three:hsl(212, 21%, 14%);
   --corp-color-four:hsl(228, 12%, 48%);
+
+  --corp-color-one-hover:rgb(24, 65, 49);
+
   --b100:black;
   --w100:white;
 
   --corp-type-titles:"Fraunces", Georgia, 'Times New Roman', Times, serif;
   --corp-type-text:"Montserrat", Arial, Helvetica, sans-serif;
-
-  --separacion:20px;
 }
 
 body {
@@ -29,20 +30,26 @@ body {
   justify-content: center;
 
   background:var(--w100);
-  width:343px;
+  width:100%;
+  min-width: 240px;
+  /* max-width: 350px; */
   border-radius:10px 10px 10px 10px;
+  margin:16px;
   overflow:hidden;
 }
 
 .card__img {
+  width:100%;
+}
+
+.card__img img {
   width: 100%;
-  max-width: 343px;
 }
 
 .card__dades {
   display: inherit;
   flex-direction: column;
-  gap:var(--separacion);
+  gap:20px;
 
   padding: 22px;
 }
@@ -67,7 +74,7 @@ body {
   color: var(--corp-color-four);
   display: inherit;
   flex-direction: column;
-  gap:var(calc(--separacion * 2)); /*gap:40px*/
+  gap:40px;
 
   font-size: 14px;
   font-weight:500;
@@ -97,6 +104,7 @@ body {
   color:var(--w100);
   border-radius:10px;
   font-size:16px;
+  text-align: center;
 
   display: flex;
   align-items: center;
@@ -105,8 +113,21 @@ body {
 
   margin-top:0px;
   padding:16px 90px;
+
+  cursor: pointer;
 } 
 
 .card__button img{
   width:14px;
+}
+
+.card__button:hover {
+  background: var(--corp-color-one-hover)
+}
+
+@media screen and (min-width: 600px) {
+  .card {
+    flex-direction: row;
+  }
+
 }

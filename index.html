@@ -24,8 +24,12 @@
 
   <article class="card">
 
-    <img class="card__img" src="images/image-product-mobile.jpg" alt="Botella de Perfumer Gabrielle de Chanel">
-
+    <picture class="card__img">
+      <source srcset="images/image-product-mobile.jpg" media="(min-width:240px) and (max-width:599px)">
+      <source srcset="images/image-product-desktop.jpg" media="(min-width:600px)">
+      <img src="images/image-product-mobile" alt="Botella de Perfumer Gabrielle de Chanel">
+    </picture>
+      
     <div class="card__dades">
       <h2>Perfume</h2>
       
